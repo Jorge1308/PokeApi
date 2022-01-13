@@ -1,6 +1,7 @@
 
 import { getEspecies, getHabilidades } from "../services/services";
 import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 
 
 export default function MostrarPokemon({ match }) {
@@ -38,10 +39,12 @@ export default function MostrarPokemon({ match }) {
                         <div>{dataDescripcion.flavor_text}</div>
                         <div className="font-weight-bold"><strong>HABILIDADES:</strong> </div>
                     {listHabilidades}
+                    <Link to={{pathname:`/`}}>Regresar</Link>
                     </div>
                     
+                    
             </div>
-           
+            
             </div>
         </>
     );
